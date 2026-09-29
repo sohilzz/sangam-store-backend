@@ -2,6 +2,7 @@ package com.sangamstore.controller;
 
 import java.util.List;
 
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,11 @@ import com.sangamstore.service.EnquiryService;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins="http://127.0.0.1:5500")
+//@CrossOrigin(origins="http://127.0.0.1:5500")
+@CrossOrigin(origins={
+	    "http://127.0.0.1:5500",
+	    "https://sangam-store-frontend.pages.dev"
+	})
 @RestController
 @RequestMapping("/api/enquiry")
 public class EnquiryController {
